@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
@@ -16,5 +16,6 @@ class ProductPageLocators():
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     # Первое сообщение после добавления: "<название> has been added to your basket."
     ADDED_PRODUCT_NAME = (By.CSS_SELECTOR, "#messages .alert:nth-child(1) strong")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages .alert-success")
     # Сообщение "Your basket total is now <сумма>"
     BASKET_TOTAL = (By.CSS_SELECTOR, "#messages .alert-info strong")
